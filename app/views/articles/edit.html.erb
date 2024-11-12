@@ -1,0 +1,11 @@
+<h1>Edit article</h1>
+
+<%= form_with model: @article do |f| %>
+  <%= f.label :title, "Title"%>
+  <%= f.text_field :title%>
+  <%= f.label :content, "Content"%>
+  <%= f.text_field :content, class: "ace_text-input"%>
+  <%= f.submit "Update Article"%>
+<% end %>
+
+<%= link_to "back", articles_path %>

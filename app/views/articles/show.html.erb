@@ -1,0 +1,7 @@
+<div class="d-flex">
+<h1><%= @article.title %></h1>
+<%= link_to '<i class="fa-solid fa-pen"></i>'.html_safe, edit_article_path(@article), class: "fs-2 mx-2" %>
+<%= link_to '<i class="fa-solid fa-trash"></i>'.html_safe, article_path(@article), class: "fs-2 mx-2", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+</div>
+
+<p class="fs-4 mt-4"><%= @article.content %></p>
